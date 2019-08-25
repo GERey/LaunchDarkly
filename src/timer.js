@@ -35,28 +35,34 @@ class Timer extends React.Component {
       this.setState({time: 0, isOn: false})
     }
     render() {
-      let start = (this.state.time == 0) ?
-        <button onClick={this.startTimer}>start</button> :
-        null
-      let stop = (this.state.time == 0 || !this.state.isOn) ?
-        null :
-        <button onClick={this.stopTimer}>stop</button>
-      let resume = (this.state.time == 0 || this.state.isOn) ?
-        null :
-        <button onClick={this.startTimer}>resume</button>
-      let reset = (this.state.time == 0 || this.state.isOn) ?
-        null :
-        <button onClick={this.resetTimer}>reset</button>
-      return(
-        <div>
-            //Set something here to ab test if more people use the timer if it is named Seconds Passed. 
-          <h3>timer: {ms(this.state.time)}</h3>
-          {start}
-          {resume}
-          {stop}
-          {reset}
-        </div>
-      )
+
+      if(this.props.flags.georgePaidFlagForTimersPermanentAugust){
+        let start = (this.state.time === 0) ?
+          <button onClick={this.startTimer}>start</button> :
+          null
+        let stop = (this.state.time === 0 || !this.state.isOn) ?
+          null :
+          <button onClick={this.stopTimer}>stop</button>
+        let resume = (this.state.time === 0 || this.state.isOn) ?
+          null :
+          <button onClick={this.startTimer}>resume</button>
+        let reset = (this.state.time === 0 || this.state.isOn) ?
+          null :
+          <button onClick={this.resetTimer}>reset</button>
+        return(
+          // <!-- Set something here to ab test if more people use the timer if it is named Seconds Passed. -->
+          <div>
+            <h3>timer: {ms(this.state.time)}</h3>
+            {start}
+            {resume}
+            {stop}
+            {reset}
+          </div>
+        )
+      }
+      else { 
+        return null;
+      }
     }
   }
 

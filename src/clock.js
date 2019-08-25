@@ -26,11 +26,16 @@ class Clock extends React.Component {
       });
     }
     render() {
-      return (
-        <p className="App-clock">
-          The time is {this.state.time}.
-        </p>
-      );
+      if(this.props.flags.georgeTempFlagForRealTimeClock){
+        return (
+          <p className="App-clock">
+            The time is {this.state.time}.
+          </p>
+        );
+      }
+      else {
+        return null;
+      }
     }
   }
 

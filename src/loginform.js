@@ -55,12 +55,15 @@ class LoginForm extends React.Component {
               </div>
     
               <hr/>
-    
-              <div className="row">
-                {
-                  this.state.data.map((info, index) => <Card key={index} info={info}/>)
-                }
-              </div>
+              {this.props.flags.georgeTurnOffDebuggingForShowingUserNameAndLogic?
+
+                <div className="row">
+                  {
+                    this.state.data.map((info, index) => <Card key={index} info={info}/>)
+                  }
+                </div>
+              : <span></span>}
+
     
             </div>
         )

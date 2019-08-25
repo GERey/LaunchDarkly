@@ -1,5 +1,7 @@
 import React from 'react';
 //taken from https://openclassrooms.com/en/courses/4286486-build-web-apps-with-reactjs/4286711-build-a-ticking-clock-component
+
+
 class Clock extends React.Component {
     constructor(props) {
       super(props);

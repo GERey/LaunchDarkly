@@ -4,6 +4,7 @@ import { withLDProvider } from 'launchdarkly-react-client-sdk';
 import HelloWorld from './helloWorld';
 import Clock from './clock';
 import WorseClock from './worse_clock';
+import LoginForm from './loginform';
 
 
 function App() {
@@ -11,11 +12,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <HelloWorld />
-
+        <LoginForm/>
       
         <Clock ></Clock>
         <WorseClock ></WorseClock>
-        // test
       </header>
     </div>
   );

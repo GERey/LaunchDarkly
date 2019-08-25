@@ -1,4 +1,7 @@
 import React from 'react';
+import { withLDConsumer } from 'launchdarkly-react-client-sdk';
+
+
 //taken from https://openclassrooms.com/en/courses/4286486-build-web-apps-with-reactjs/4286711-build-a-ticking-clock-component
 
 class Clock extends React.Component {
@@ -31,4 +34,4 @@ class Clock extends React.Component {
     }
   }
 
-  export default Clock;
+  export default withLDConsumer()(Clock);

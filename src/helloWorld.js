@@ -5,8 +5,11 @@ import { withLDConsumer } from 'launchdarkly-react-client-sdk';
 
 const HelloWorld = ({ flags }) => {
 
-    
-    return flags.georgeTempHelloWorldTempAugust? <div>Flag on</div> : <div>Flag off</div>;
+    if(flags.georgeTempHelloWorldTempAugust){
+        return <div>Hello World!!!</div>;  
+    }
+    return null;
+
 };
 
 export default withLDConsumer()(HelloWorld);

@@ -5,17 +5,21 @@ import HelloWorld from './helloWorld';
 import Clock from './clock';
 import WorseClock from './worse_clock';
 import LoginForm from './loginform';
+import Timer from './timer';
 
 
 function App() {
   return (
     <div className="App">
+      
       <header className="App-header">
+      <h1>Clock App</h1>
         <HelloWorld />
         <LoginForm/>
       
         <Clock ></Clock>
         <WorseClock ></WorseClock>
+        <Timer />
       </header>
     </div>
   );

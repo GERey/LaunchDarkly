@@ -15,7 +15,8 @@ You'll need to have at least the following installed on your computer:
 ### How to bootstrap application
 
 - Git Clone the directory
-- Run `npm run`
+- Run `npm install`
+- Run `npm start`
 
 The above steps run the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

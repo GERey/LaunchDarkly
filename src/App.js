@@ -30,7 +30,7 @@ function App() {
 }
 
 export default withLDProvider({ 
-  clientSideID: '5d61888d06f6eb087822fa31',
+  clientSideID: 'xxx,
   user: {
       "key": "user_key",
       "name": "User Name",
